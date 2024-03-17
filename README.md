@@ -15,32 +15,32 @@ How many neurons, layers, and activation functions did you select for your neura
 Main neural network model has contained two hidden layers with 80 and 30 neurons respectively. The hidden layes used "relu"activation function while the output layer used 'sigmoid'activation function. In this analysis, the epochs number was 100.
 
 Were you able to achieve the target model performance?
-The original neural network model could not achieve the target model performance which is 75%. The accuracy of this model was approximately 73% and the loss was 56% 55.2%.
+No, the original neural network model could not achieve the target model performance which was 75%. The accuracy of this model was approximately 73% and the loss was 55.0%.
 
 What steps did you take in your attempts to increase model performance?
 
 Six different attempts were run in order to try to optimize the model:
 
-* Attempt #1 To start, two hidden layers (relu for the 1st activation and sigmoid for the 2nd hidden layer) were used along with lower inputs (15 for the first and 10 for the second). All attempts used 100 epochs
+* Attempt #1 To start, two hidden layers (relu for the 1st activation and sigmoid for the 2nd hidden layer) were used along with lower inputs (15 for the first and 10 for the second). All attempts used 100 epochs and a loss using binary crossentropy. This attempt yielded 72.8% accuracy and 55.1% loss.
 
-* Attempt #2 In this attempt, number of epoches was increased to 150 from 100.The new hidden layer that was added in attempt 1 stayed same. After change in the epoch numbers, the accuracy level stayed same (73%) while loss level increase (58%).
+* Attempt #2 In this attempt, the 2nd hidden layer was changed from sigmoid to relu. The input numbers were changed from 80 and 32 for the first and second layers respectively. This attempt yielded 72.7% accuracy and 55.6% loss.
 
-* Attempt #3 
+* Attempt #3 Next this attempt had another hidden layer added making the 3rd layer a sigmoid. The inputs were changed for the first hidden layer to 48 and the 3rd layer was set to 8. This attempt yielded 72.7% accuracy and 55.2% loss.
 
-* Attempt #4 This attempt yielded the lowest loss of the six tries (see below). Changes made to this one were the inputs increased to 128 for the 1st hidden layer, 64 for the 2nd layer, and 32 for the 3rd. The other major change for this attempt was the Optimizer was changed from adam to SGD(Stochastic Gradient Descent). The accuracy from 72.7% to and the loss decreased from 55.6% to 55.2%.
+* Attempt #4 This attempt yielded the lowest loss of the six tries (see below). Changes made to this one were the inputs increased to 128 for the 1st hidden layer, 64 for the 2nd layer, and 32 for the 3rd. The other major change for this attempt was the Optimizer was changed from adam to SGD(Stochastic Gradient Descent). The accuracy from 72.7% to and the loss decreased from 55.2% to 55.0%.
 
   ![image](https://github.com/Hesprmic/deep-learning-challenge/assets/144865763/17f8cdbd-c0a4-4ff7-847f-abbce5444f16)
 
 
-* Attempt #5 This attempt yielded the highest accuracy of the six tries (see below). The hidden layer input numbers were changed again to 48, 32, 16 respectively through the three hidden layers. The biggest change came in the form of switching the optimizer, this time to RMSprop.
+* Attempt #5 This attempt yielded the highest accuracy of the six tries (see below). The hidden layer input numbers were changed again to 48, 32, 16 respectively through the three hidden layers. The biggest change came in the form of switching the optimizer, this time to RMSprop. The accuracy from 73% to and the loss was 55.3%.
 
 ![image](https://github.com/Hesprmic/deep-learning-challenge/assets/144865763/62505d0c-ab38-489d-9344-f393dbc0bcc1)
 
 
-* Attempt #6 In the final attempt, the only change from the previous attempt was a change of the 3rd hidden layer from sigmoid to relu. This new attempt has 72.8% accuracy and 56.4% loss.
+* Attempt #6 In the final attempt, the only change from the previous attempt was a change of the 3rd hidden layer from sigmoid to relu. This last attempt has 72.8% accuracy and 56.4% loss.
 
 Summary:
-None of six optimization attempts had achieved increase in accuracy, instead they were cause to increase in loss. Overall, the deep learning model achieved a moderate accuracy of around 72.79%. To potentially improve the classification performance, I would recommend exploring the following:
+None of six optimization attempts had achieved increase in accuracy enough to reach the target performance. Overall, the deep learning model achieved a moderate accuracy of around 73%. To potentially improve the classification performance, I would recommend exploring the following:
 
 Ensemble methods such as Random Forests or Gradient Boosting Machines could be explored. These methods often perform well with tabular data and can capture complex relationships between features.
 
@@ -51,4 +51,4 @@ Feature Engineering: Feature engineering can be crucial for improving model perf
 Model Interpretability: Consider using interpretable models like decision trees or logistic regression, which offer transparency and insights into the decision-making process, especially if model interpretability is important for the application.
 By employing these strategies and potentially exploring different types of models, it's possible to achieve better performance in the classification problem.
 
-Note: Tyler helped with a fair amount of the preprocessing coding. I also did research on Keras.io to get other optimizers. 
+Note: Tyler helped with a fair amount of the preprocessing coding. I also did research on Keras.io to get other optimizers. The improvement ideas came from a variety of websites and youtube videos.
