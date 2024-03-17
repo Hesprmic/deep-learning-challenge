@@ -5,19 +5,20 @@ For this homework challenge we were tasked with utilizing Machine Learning to co
 Results:
 
 Data Preprocessing
+
 The column named "IS_SUCCESSFUL" is target of this model (dependent variable)
-During optimization attempts, different feature sets were used to understand their effects on the loss/accuracy.
+Different feature variables were used to understand their effects on the loss/accuracy.
 For all optimization attempts "EIN" and "NAME" variables were removed.
 
 Compiling, Training and Evaluating the Model
 
 How many neurons, layers, and activation functions did you select for your neural network model, and why?
-Main neural network model has contained two hidden layers with 80 and 30 neurons respectively. The hidden layes used "relu"activation function while the output layer used 'sigmoid'activation function. In this analysis, the epochs number was 100.
+See below for individual attempts.
 
 Were you able to achieve the target model performance?
 No, the original neural network model could not achieve the target model performance which was 75%. The accuracy of this model was approximately 73% and the loss was 55.0%.
 
-What steps did you take in your attempts to increase model performance?
+What steps did you take in your attempts to increase model performance? Adjusted different optimizers, layers, neurons.
 
 Six different attempts were run in order to try to optimize the model:
 
