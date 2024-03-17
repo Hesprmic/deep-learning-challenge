@@ -21,7 +21,7 @@ What steps did you take in your attempts to increase model performance?
 
 Six different attempts were run in order to try to optimize the model:
 
-* Attempt #1 To start, two hidden layers were used along with lower input
+* Attempt #1 To start, two hidden layers (relu for the 1st activation and sigmoid for the 2nd hidden layer) were used along with lower inputs (15 for the first and 10 for the second). All attempts used 100 epochs
 
 * Attempt #2 In this attempt, number of epoches was increased to 150 from 100.The new hidden layer that was added in attempt 1 stayed same. After change in the epoch numbers, the accuracy level stayed same (73%) while loss level increase (58%).
 
@@ -32,12 +32,23 @@ Six different attempts were run in order to try to optimize the model:
   ![image](https://github.com/Hesprmic/deep-learning-challenge/assets/144865763/17f8cdbd-c0a4-4ff7-847f-abbce5444f16)
 
 
-* Attempt #5
+* Attempt #5 This attempt yielded the highest accuracy of the six tries (see below). The hidden layer input numbers were changed again to 48, 32, 16 respectively through the three hidden layers. The biggest change came in the form of switching the optimizer, this time to RMSprop.
 
 ![image](https://github.com/Hesprmic/deep-learning-challenge/assets/144865763/62505d0c-ab38-489d-9344-f393dbc0bcc1)
 
 
-* Attempt #6 In the final attempt,  This new model has 72.8% accuracy and 56.6% loss.
+* Attempt #6 In the final attempt, the only change from the previous attempt was a change of the 3rd hidden layer from sigmoid to relu. This new attempt has 72.8% accuracy and 56.4% loss.
 
 Summary:
-None of three optimization attempts had acieved increase in accuracy, instead they were cause to increase in loss. Since there are a lot of categorical data in our dataset, may be trying decision tree or random forrest methods will work better.
+None of six optimization attempts had achieved increase in accuracy, instead they were cause to increase in loss. Overall, the deep learning model achieved a moderate accuracy of around 72.79%. To potentially improve the classification performance, I would recommend exploring the following:
+
+Ensemble methods such as Random Forests or Gradient Boosting Machines could be explored. These methods often perform well with tabular data and can capture complex relationships between features.
+
+Hyperparameter Tuning: Utilize techniques like grid search or random search to systematically explore different hyperparameter configurations and find the optimal combination for improved performance.
+
+Feature Engineering: Feature engineering can be crucial for improving model performance. Analyze the data further to create new features or transform existing ones to better represent patterns in the data.
+
+Model Interpretability: Consider using interpretable models like decision trees or logistic regression, which offer transparency and insights into the decision-making process, especially if model interpretability is important for the application.
+By employing these strategies and potentially exploring different types of models, it's possible to achieve better performance in the classification problem.
+
+Note: Tyler helped with a fair amount of the preprocessing coding. I also did research on Keras.io to get other optimizers. 
